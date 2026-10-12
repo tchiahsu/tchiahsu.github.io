@@ -12,11 +12,11 @@ export const workData = [
     start: "May 2026",
     finish: "Present",
     description: [
-      "Built a notification feature publishing file-upload events to an SQS queue, using a database-backed tracking record to guarantee at-least-once delivery across service crashes or restarts.",
-      "Added chart support to the document generation API via server-side rendering with Chart.js and Puppeteer, enabling data visualizations in generated PDFs without impacting existing template performance.",
-      "Made log verbosity runtime-configurable via a LOG_LEVEL environment variable, demoting high-volume performance logs to debug, reducing log volume by 40% and improving event visibility in Datadog.",
-      "Built search and filtering for the internal control center using Radix UI, integrated into the existing design system, eliminating manual scrolling across 20+ applications.",
-      "Rebuilt the local development stack with a single init script for Docker orchestration, environment config, and app seeding, plus local AWS emulation for SQS, SNS, and S3, cutting setup time to under 5 minutes.",
+      "Built an Airflow ETL pipeline and NestJS REST services that migrates payroll and deposit configurations from an Infor CRM and Oracle system into the new payroll platform, replacing manual data entry to a one-click migration with rollback across 3,000+ clients.",
+      "Enabled dynamic chart-based PDF reports through the existing document-generation workflow, letting template authors add data-bound charts that render per document at generation time, with no performance degradation for current chart-less document generation.",
+      "Implemented an event-driven client notification pipeline using Amazon SQS with dead-letter handling, content-based de-duplication, and persisted timestamps to prevent duplicate delivery under retries, giving clients automatic confirmation for every SFTP file upload.",
+      "Developed a Kubernetes-based Azure DevOps to Glean repository crawler that tracks repositories tip commit SHA to skip unchanged code and syncs permission-aware visibility, giving our enterprise search platform full visibility into our code patterns across 25,000+ files.",
+      "Overhauled the local development stack by replacing LocalStack with Floci for SQS/S3 emulation and automating environment setup with a single setup script for 12 service configurations and AWS resources, cutting setup time from 2 hours to under 15 minutes.",
       "Upgraded control center and document management app to the latest custom utility package, resolving all breaking changes to bring both services onto current builds.",
     ]
   },
